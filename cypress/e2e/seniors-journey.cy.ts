@@ -3,14 +3,14 @@
 describe('seniors journey', () => {
   beforeEach(() => {
     cy.login()
+
+    cy.intercept('*', (req) => {
+      req.headers['Authorization'] = `Bearer ${Cypress.env('oauthAccessToken')}`
+    })
   })
 
+
   it('authenticates', () => {
-    cy.visit({
-      url: Cypress.config('baseUrl')!,
-      headers: {
-        Authorization: `Bearer ${Cypress.env('oauthAccessToken')}`
-      }
-    })
+    cy.visit(Cypress.config('baseUrl')!)
   })
 })
