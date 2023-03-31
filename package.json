@@ -1,0 +1,13 @@
+{
+  "name": "cypress-oauth",
+  "version": "00000000-0000-00000000",
+  "private": "true",
+  "devDependencies": {
+    "cypress": "^12.9.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  }
+}
