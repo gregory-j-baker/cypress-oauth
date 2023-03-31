@@ -6,6 +6,11 @@ describe('seniors journey', () => {
   })
 
   it('authenticates', () => {
-    cy.visit(Cypress.config('baseUrl')!)
+    cy.visit({
+      url: Cypress.config('baseUrl')!,
+      headers: {
+        Authorization: `Bearer ${Cypress.env('oauthAccessToken')}`
+      }
+    })
   })
 })
