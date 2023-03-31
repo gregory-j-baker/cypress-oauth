@@ -9,6 +9,7 @@ export default defineConfig({
     env: {
       oauthClientId: process.env.OAUTH_CLIENT_ID,
       oauthClientSecret: process.env.OAUTH_CLIENT_SECRET,
+      oauthEnabled: process.env.OAUTH_ENABLED === 'true',
       oauthScope: process.env.OAUTH_SCOPE,
       oauthTokenUrl: process.env.OAUTH_TOKEN_URL
     },
